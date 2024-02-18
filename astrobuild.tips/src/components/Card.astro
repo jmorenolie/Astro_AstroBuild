@@ -1,57 +1,61 @@
 ---
 interface Props {
-	title: string;
-	time: string;
-	time2: string;
-	text: string;
-	read: string;
+  title: string;
+  time: string;
+  time2: string;
+  text: string;
+  read: string;
 }
 
 const { title, time, time2, text, read } = Astro.props;
 ---
 
-<article class="flex bg-white transition hover:shadow-xl dark:bg-gray-900 dark:bg-gray-800/25">
-	<div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
-	  <time
-		datetime="2022-10-10"
-		class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900 dark:text-white"
-	  >
-		<span>2022</span>
-		<span class="w-px flex-1 bg-gray-900/10 dark:bg-white/10"></span>
-		<span>Feb 18</span>
-	  </time>
-	</div>
-  
-	<div class="hidden sm:block sm:basis-56">
-	  <img
-		alt=""
-		src="https://www.datocms-assets.com/57452/1687357678-astro-1.png"
-		class="aspect-square h-full w-full object-cover"
-	  />
-	</div>
-  
-	<div class="flex flex-1 flex-col justify-between">
-	  <div
-		class="border-s border-gray-900/10 p-4 sm:!border-l-transparent sm:p-6 dark:border-white/10"
-	  >
-		<a href="#">
-		  <h3 class="font-bold uppercase text-gray-900 dark:text-white">
-			{title}
-		  </h3>
-		</a>
-  
-		<p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700 dark:text-gray-200">
-		  {text}
-		</p>
-	  </div>
-  
-	  <div class="sm:flex sm:items-end sm:justify-end">
-		<a
-		  href="#"
-		  class="block bg-yellow-400 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-500"
-		>
-		  {read}
-		</a>
-	  </div>
-	</div>
-  </article>
+<article
+  class="flex bg-white transition hover:shadow-xl dark:bg-gray-900 dark:bg-gray-200/25"
+>
+  <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+    <time
+      datetime="2022-10-10"
+      class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900 dark:text-white"
+    >
+      <span>2022</span>
+      <span class="w-px flex-1 bg-gray-900/10 dark:bg-white/10"></span>
+      <span>Feb 18</span>
+    </time>
+  </div>
+
+  <div class="hidden sm:block sm:basis-56">
+    <img
+      alt=""
+      src="https://www.datocms-assets.com/57452/1687357678-astro-1.png"
+      class="aspect-square h-full w-full object-cover"
+    />
+  </div>
+
+  <div class="flex flex-1 flex-col justify-between">
+    <div
+      class="border-s border-gray-900/10 p-4 sm:!border-l-transparent sm:p-6 dark:border-white/10"
+    >
+      <a href="#">
+        <h3 class="font-bold uppercase text-gray-900 dark:text-white">
+          {title}
+        </h3>
+      </a>
+
+      <p
+        class="mt-2 line-clamp-3 text-sm/relaxed text-gray-700 dark:text-gray-200"
+      >
+        {text}
+      </p>
+    </div>
+
+    <div class="sm:flex sm:items-end sm:justify-end">
+      <a
+        href="#"
+        class="block bg-yellow-400 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-500"
+      >
+        {read}
+      </a>
+    </div>
+  </div>
+</article>
