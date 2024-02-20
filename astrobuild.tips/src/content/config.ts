@@ -10,6 +10,7 @@ export const collections = {
             text: z.number(),
             read: z.number(),
             img: z.number(),
+            slug: z.string()
         }),
     }),
 }

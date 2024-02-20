@@ -6,9 +6,10 @@ interface Props {
   text: string;
   read: string[];
   img: string;
+  slug: string;
 }
 
-const { title, time, time2, text, read, img } = Astro.props;
+const { title, time, time2, text, read, img, slug } = Astro.props;
 ---
 
 <article
@@ -59,12 +60,13 @@ const { title, time, time2, text, read, img } = Astro.props;
           ))
         ) : (
           // Manejar el caso cuando read no es un arreglo
+          <a href={`/posts/${slug}`}>
           <span class="block bg-gray-300 px-20 py-1 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-gray-500">
             {read}
           </span>
+          </a>
         )
       }
     </div>
-    
   </div>
 </article>
